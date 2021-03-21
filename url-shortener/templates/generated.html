@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}URL Shortener - Generated{% endblock %}
+{% block inbody %}
+{% if short_url in errlist %}
+<h1>{{errlist[short_url]}}</h1>
+{% else %}
+<h1>Generated URL: <a href="/{{short_url}}">{{short_url}}</a></h1>
+{% endif %}
+{% endblock %}
